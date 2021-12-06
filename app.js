@@ -1,5 +1,8 @@
-
 var movieName;
+
+function cardClose(){
+  document.getElementById("cardClose").style.display="none";
+}
 
 function getMovie() {
   movieName = document.getElementById("movie").value;
@@ -36,3 +39,8 @@ function getMovie() {
       });
   }
 }
+
+
+setTimeout(function(){ 
+  document.getElementById("cardClose").style.display="block"
+}, 3000);
