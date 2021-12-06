@@ -17,20 +17,29 @@ function getMovie() {
       .then((json) => {
         console.log(json);
         if (json.Response === "True") {
-          document.getElementById("output").innerHTML = `<div class="row">
-    <div class="col text-center my-auto" id="moviePoster">
-      <img src=${json.Poster} >
-    </div>
-    <div class="col">
-      <h3 class="movie-title" style="color: #2F5233;">${json.Title}</h3>
-      <p class="year"><b>Year:</b> ${json.Year}</p>
-      <p class="rated"><b>Rated:</b> ${json.Rated} </p>
-      <p class="released"><b>Released:</b> ${json.Released}</p>
-      <p class="runtime"><b>Runtime: </b>${json.Runtime}</p>
-      <p class="genre"><b>Genre:</b> ${json.Genre} </p>
-      <p class="cast"><b>Actors:</b> ${json.Actors} </p>
-    </div>
-  </div>`;
+          document.getElementById("output").innerHTML = 
+          `<div class="row text-center" id="output">
+        <div class="col align-self-center">
+          <div class="card mx-auto shadow" style="width: 18rem;">
+            <img src=${json.Poster} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">${json.Title}</h3>
+              <p class="card-text">${json.Actors}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Year: </b>${json.Year}</li>
+            <li class="list-group-item"><b>Rated: </b>${json.Rated}</li>
+            <li class="list-group-item"><b>Released: </b>${json.Released}</li>
+            <li class="list-group-item"><b>Runtime: </b>${json.Runtime}</li>
+            <li class="list-group-item"><b>Genre: </b>${json.Genre}</li>
+            <li class="list-group-item"><b>Released: </b>${json.Released}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+          `
+          document.getElementById("foot").className="text-center text-white sticky-bottom"
+          ;
         } else {
           document.getElementById(
             "output"
@@ -40,7 +49,6 @@ function getMovie() {
   }
 }
 
-
-setTimeout(function(){ 
-  document.getElementById("cardClose").style.display="block"
-}, 3000);
+// setTimeout(function(){ 
+//   document.getElementById("cardClose").style.display="block"
+// }, 2000);
