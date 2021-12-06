@@ -36,14 +36,13 @@ function getMovie() {
             </ul>
           </div>
         </div>
-      </div>
-          `
+      </div>`
           document.getElementById("foot").className="text-center text-white sticky-bottom"
-          ;
         } else {
           document.getElementById(
             "output"
           ).innerHTML = `<div class="text-center text-danger"><h4>Movie Not Found</h4></div>`;
+          document.getElementById("foot").className="text-center text-white fixed-bottom"
         }
       });
   }
