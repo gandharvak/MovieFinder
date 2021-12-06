@@ -13,3 +13,12 @@
 .btn-close{
     float: right;
 }
+.social
+{
+    text-decoration: none;
+    color: black;
+    padding-left: 0.7rem;
+}
+.social:hover{
+    color: #2F5233;
+}
