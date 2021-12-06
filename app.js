@@ -49,6 +49,6 @@ function getMovie() {
   }
 }
 
-// setTimeout(function(){ 
-//   document.getElementById("cardClose").style.display="block"
-// }, 2000);
+setTimeout(function(){ 
+  document.getElementById("cardClose").style.display="block"
+}, 2000);
