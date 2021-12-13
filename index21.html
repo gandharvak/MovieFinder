@@ -19,15 +19,38 @@
       
     <nav class="navbar navbar-light">
         <div class="container">
-          <a class="navbar-brand mx-auto" style="color: #2F5233; text-decoration: none;" href="index.html">
+          <a class="navbar-brand mx-auto" style="color: #2F5233; text-decoration: none;" href="homepage.html">
             <img src="icon.png" alt="" width="30" height="24" class="d-inline-block align-text-top mx-1">
             Movie Finder
           </a>
         </div>
       </nav>
       
-<h1>Homepage</h1>
+      <div class=" container text-center" style="width: 60%;">
+            <form class="form-inline my-4" id="movieForm">
+              <input class="form-control shadow-sm" type="text" placeholder="Search Movie Here" id="movie" aria-label="Search" style="border-radius: 4rem; border: none; border-bottom:.1rem solid #76B947;">
+            </form>
+            <button class="btn btn-outline-success shadow-sm" style="border-radius: 4rem; padding:.4rem 3rem .4rem 3rem;" type="submit" onclick="getMovie()">Search</button>
+            <hr>
+      </div>
 
+
+      <div class="container" id="output">
+      
+      </div>
+
+      <div class="back" id="cardClose">
+        <div class="card model container">
+          <div class="card-header">
+            Message
+            <button type="button" class="btn-close" aria-label="Close" onclick="cardClose()"></button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" style="color: #2F5233;">CSS Project By</h5>
+            <p class="card-text"><b>Name:</b> Gandharv Kulkarni <br> <b>Enrollment No:</b> 1910950187 <br><b>Roll No:</b> 63</p>
+          </div>
+        </div>
+      </div>
 
 
   <footer class="text-center text-white fixed-bottom" id="foot">
@@ -48,7 +71,7 @@
   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <script src="./app.js"></script>
     
   </body>
   <script>
